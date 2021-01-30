@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <!-- link css -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- link alpine js -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- navbar -->
+        <nav class="p-8" x-data="{navigationOpen: false}">
+            <div
+                class="rounded-full overflow-hidden flex justify-between items-center text-white px-6 container mx-auto">
+                <div class="flex items-center text-black text-2xl font-bold h-16 relative z-50">
+                    <a href="#">COFFEE</a>
+                </div>
+                <div class="flex justify-end items-center">
+                    <div class="flex lg:mt-0 items-center lg:block py-16 scal lg:py-0 fixed lg:static w-2/3 lg:w-auto left-0 top-0 bottom-0 overflow-x-auto  bg-gray-100 lg:bg-white z-30 transform transition-all duration-300 origin-top-left lg:origin-right"
+                        @click.away="navigationOpen = false" x-show="navigationOpen"
+                        x-transition:enter-start="opacity-0 lg:scale-75"
+                        x-transition:enter-end="opacity-100 lg:scale-100"
+                        x-transition:leave-start="opacity-100 lg:scale-100"
+                        x-transition:leave-end="opacity-0 lg:scale-75">
+                        <ul class="flex text-black text-md flex-wrap uppercase items-center max-h-full overflow-auto">
+                            <li class="lg:mx-2 w-full lg:w-auto shadow lg:shadow-none">
+                                <a href="#" class="p-4 block hover:text-yellow-500">Menu</a>
+                            </li>
+                            <li class="lg:mx-2 w-full lg:w-auto shadow lg:shadow-none">
+                                <a href="#" class="p-4 block hover:text-yellow-500">Gallery</a>
+                            </li>
+                            <li class="lg:mx-2 w-full lg:w-auto shadow lg:shadow-none">
+                                <a href="#" class="p-4 block hover:text-yellow-500">Contact</a>
+                            </li>
+                            <li class="lg:mx-2 w-full lg:w-auto shadow lg:shadow-none">
+                                <a href="#" class="p-4 block hover:text-yellow-500">Blog</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="flex justify-center flex-col w-6 h-8 space-y-1 flex-wrap focus:outline-none"
+                        @click="navigationOpen = !navigationOpen">
+                        <span class="h-1 w-6 bg-black rounded" x-show.transition="!navigationOpen"></span>
+                        <span class="h-1 w-6 bg-black rounded"></span>
+                        <span class="h-1 w-6 bg-black rounded" x-show.transition="!navigationOpen"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- hero -->
+        <div class="carousel relative bg-white px-8">
+            <div class="carousel-inner relative overflow-hidden w-full">
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                    checked="checked">
+                <div class="carousel-item absolute opacity-0">
+                    <img class="h-100 w-full object-center object-cover" src="images/bg-4.jpg" alt="">
+                </div>
+                <label for="carousel-3"
+                    class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-2"
+                    class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0">
+                    <img class="h-100 w-full object-center object-cover" src="images/bg-8.jpg" alt="">
+                </div>
+                <label for="carousel-1"
+                    class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-3"
+                    class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0">
+                    <img class="h-100 w-full object-center object-cover" src="images/bg-3.jpg" alt="">
+                </div>
+                <label for="carousel-2"
+                    class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-1"
+                    class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!-- Add additional indicators for each slide-->
+                <ol class="carousel-indicators">
+                    <li class="inline-block mr-3">
+                        <label for="carousel-1"
+                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-yellow-500">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-2"
+                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-yellow-500">•</label>
+                    </li>
+                    <li class="inline-block mr-3">
+                        <label for="carousel-3"
+                            class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-byellow-500">•</label>
+                    </li>
+                </ol>
+
+            </div>
+
+            <div
+                class="absolute -inset-0 flex flex-col justify-start my-16 sm:my-0 sm:justify-center mx-20 md:mx-40 lg:mx-60">
+                <!-- text -->
+                <h1 class="text-white text-5xl sm:text-7xl text-center md:text-left md:text-9xl font-bold uppercase">
+                    Coffee</h1>
+                <h2 class="text-white text-3xl sm:text-5xl text-center md:text-left md:text-7xl uppercase">Shop</h2>
+            </div>
+        </div>
+
+    </header>
+
+</body>
+
+</html>
