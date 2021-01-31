@@ -5,7 +5,8 @@
 
 .carousel-item {
 	-webkit-transition: opacity 0.6s ease-out;
-	transition: opacity 0.6s ease-out;
+	transition: opacity 0.01s ease-out;
+	
 }
 
 #carousel-1:checked ~ .control-1,
