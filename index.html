@@ -122,7 +122,7 @@
     <main>
 
         <!-- story -->
-        <section class="px-8 text-gray-600 body-font">
+        <section class="p-8 text-gray-600 body-font">
             <div class="container mx-auto flex px-5 py-20 lg:flex-row flex-col items-center">
 
                 <!-- barista -->
@@ -152,14 +152,14 @@
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>Coffee is a restaurant, bar and coffee
+                            </svg>Coffee is a restaurant, bar and coffee roastery located
                         </li>
                         <li class="flex">
                             <svg class="w-5 mr-3 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>Coffee is a restaurant, bar and coffee roastery located on a Sumi
+                            </svg>Coffee is a restaurant, bar and coffee roastery located
                         </li>
                         <li class="flex">
                             <svg class="w-5 mr-3 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -172,6 +172,191 @@
                 </div>
 
             </div>
+        </section>
+
+        <!-- menu -->
+        <section class="py-8 px-16 text-gray-600 body-font">
+
+            <div class="text-center">
+                <h5 class="text-gray-400">Find About</h5>
+                <h3 class="title-font sm:text-4xl text-3xl mb-8 font-medium text-gray-900">Our Menu</h3>
+            </div>
+
+            <div class="my-12 text-center text-gray-500" x-data="{ tab: 'all' }">
+                <button class="focus:text-yellow-500 hover:text-yellow-500" :class="{ 'active': tab === 'all' }"
+                    @click="tab = 'all'">
+                    ALL
+                </button>
+                <button class="mx-12 focus:text-yellow-500 hover:text-yellow-500" :class="{ 'active': tab === 'hot' }"
+                    @click="tab = 'hot'">
+                    HOT
+                </button>
+                <button class="focus:text-yellow-500 hover:text-yellow-500" :class="{ 'active': tab === 'new' }"
+                    @click="tab = 'new'">
+                    NEW
+                </button>
+
+                <!-- tab all -->
+                <div x-show="tab === 'all'" class="my-12 grid grid-cols-1 lg:grid-cols-2 gap-y-14">
+                    <!-- kopi 1 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-5-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caffè Latte</a>
+                            <p class="hidden md:block">
+                                ......................................... </p>
+                            <p class="text-yellow-500 items-end">$17.5</p>
+                        </div>
+                    </div>
+                    <!-- kopi 2 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-3-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Cappuccino</a>
+                            <p class="hidden md:block">
+                                ..................................... </p>
+                            <p class="text-yellow-500 items-end">$39.2</p>
+                        </div>
+                    </div>
+                    <!-- kopi 3 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-4-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caffè Mocha</a>
+                            <p class="hidden md:block">
+                                ......................................... </p>
+                            <p class="text-yellow-500 items-end">$16</p>
+                        </div>
+                    </div>
+                    <!-- kopi 4 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-6-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caramel Macchiato</a>
+                            <p class="hidden md:block">
+                                ...................... </p>
+                            <p class="text-yellow-500 items-end">$15.5</p>
+                        </div>
+                    </div>
+                    <!-- kopi 5 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-8-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caffè Americano</a>
+                            <p class="hidden md:block">
+                                ............................. </p>
+                            <p class="text-yellow-500 items-end">$29</p>
+                        </div>
+                    </div>
+                    <!-- kopi 6 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-9-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Espresso Con Panna</a>
+                            <p class="hidden md:block">
+                                ..................... </p>
+                            <p class="text-yellow-500 items-end">$12.4</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end tab all -->
+
+                <!-- tab hot -->
+                <div x-show="tab === 'hot'" class="my-12 grid grid-cols-1 lg:grid-cols-2 gap-y-14">
+                    <!-- kopi 1 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-5-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caffè Latte</a>
+                            <p class="hidden md:block">
+                                ......................................... </p>
+                            <p class="text-yellow-500 items-end">$17.5</p>
+                        </div>
+                    </div>
+                    <!-- kopi 2 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-3-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Cappuccino</a>
+                            <p class="hidden md:block">
+                                ..................................... </p>
+                            <p class="text-yellow-500 items-end">$39.2</p>
+                        </div>
+                    </div>
+                    <!-- kopi 3 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-4-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caffè Mocha</a>
+                            <p class="hidden md:block">
+                                ......................................... </p>
+                            <p class="text-yellow-500 items-end">$16</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end tab hot -->
+
+                <!-- tab new -->
+                <div x-show="tab === 'new'" class="my-12 grid grid-cols-1 lg:grid-cols-2 gap-y-14">
+                    <!-- kopi 4 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-6-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caramel Macchiato</a>
+                            <p class="hidden md:block">
+                                ...................... </p>
+                            <p class="text-yellow-500 items-end">$15.5</p>
+                        </div>
+                    </div>
+                    <!-- kopi 5 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-8-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caffè Americano</a>
+                            <p class="hidden md:block">
+                                ............................. </p>
+                            <p class="text-yellow-500 items-end">$29</p>
+                        </div>
+                    </div>
+                    <!-- kopi 6 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-9-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Espresso Con Panna</a>
+                            <p class="hidden md:block">
+                                ..................... </p>
+                            <p class="text-yellow-500 items-end">$12.4</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end tab new -->
+            </div>
+            <!-- end tab -->
+
         </section>
 
     </main>
