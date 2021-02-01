@@ -174,7 +174,70 @@
             </div>
         </section>
 
-        <!-- menu -->
+        <!-- menu hot -->
+        <section class="p-8 text-gray-600 body-font">
+
+            <div class="relative">
+                <img class="hidden sm:block  h-100 w-full object-cover" src="images/bg-7.jpg" alt="">
+
+                <div class="relative sm:absolute -inset-0">
+                    <div class="p-8">
+                        <h5 class="text-gray-400 sm:text-gray-300">Discover</h5>
+                        <h3 class="text-gray-900 sm:text-gray-100 title-font sm:text-4xl text-3xl mb-4 font-medium">Menu
+                            Hot</h3>
+                    </div>
+
+                    <div class="relative sm:absolute bottom-0 flex flex-col sm:flex-row items-center sm:items-stretch">
+                        <!-- card 1 -->
+                        <div class=" w-60 shadow-md sm:shadow-none sm:hover:shadow-md bg-gray-100 sm:bg-white
+                        px-5 flex flex-col justify-center">
+                            <img class="w-60 mt-5 transition duration-500 ease-in-out transform hover:rotate-180"
+                                src="images/cofe-8-min.png" alt="">
+                            <div class="ml-3 mt-5 mb-3 sm:mb-0">
+                                <p class="text-gray-800 uppercase mb-2">Caffè Americano</p>
+                                <div class="flex">
+                                    <p class="text-yellow-500 text-sm">$29</p>
+                                    <div class="grid grid-cols-5 gap-x-1 ml-9 items-center">
+                                        <img class="h-3 text-gray-600" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card 2 -->
+                        <div
+                            class="w-60 shadow-md sm:shadow-none sm:hover:shadow-md bg-gray-100 sm:bg-white mt-10 sm:mt-0 sm:ml-10 px-5 flex flex-col justify-center">
+                            <img class="w-52 mt-5 transition duration-500 ease-in-out transform hover:rotate-180"
+                                src="images/cofe-9-min.png" alt="">
+                            <div class="ml-3 mb-3">
+                                <p class="text-gray-800 uppercase mb-2">Espresso Con Panna</p>
+                                <div class="flex">
+                                    <p class="text-yellow-500 text-sm">$12</p>
+                                    <div class="grid grid-cols-5 gap-x-1 ml-9 items-center">
+                                        <img class="h-3 text-gray-600" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                        <img class="h-3" src="images/heart.svg" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- our menu -->
         <section class="py-8 px-16 text-gray-600 body-font">
 
             <div class="text-center">
@@ -182,14 +245,14 @@
                 <h3 class="title-font sm:text-4xl text-3xl mb-8 font-medium text-gray-900">Our Menu</h3>
             </div>
 
-            <div class="my-12 text-center text-gray-500" x-data="{ tab: 'all' }">
+            <div class="mb-16 text-center text-gray-500" x-data="{ tab: 'all' }">
                 <button class="focus:text-yellow-500 hover:text-yellow-500" :class="{ 'active': tab === 'all' }"
                     @click="tab = 'all'">
                     ALL
                 </button>
-                <button class="mx-12 focus:text-yellow-500 hover:text-yellow-500" :class="{ 'active': tab === 'hot' }"
-                    @click="tab = 'hot'">
-                    HOT
+                <button class="mx-12 uppercase focus:text-yellow-500 hover:text-yellow-500"
+                    :class="{ 'active': tab === 'hot' }" @click="tab = 'hot'">
+                    Caffè
                 </button>
                 <button class="focus:text-yellow-500 hover:text-yellow-500" :class="{ 'active': tab === 'new' }"
                     @click="tab = 'new'">
@@ -197,7 +260,7 @@
                 </button>
 
                 <!-- tab all -->
-                <div x-show="tab === 'all'" class="my-12 grid grid-cols-1 lg:grid-cols-2 gap-y-14">
+                <div x-show="tab === 'all'" class="my-12 uppercase grid grid-cols-1 lg:grid-cols-2 gap-y-14">
                     <!-- kopi 1 -->
                     <div class="flex justify-center">
                         <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
@@ -267,14 +330,14 @@
                             <a class="text-gray-800">Espresso Con Panna</a>
                             <p class="hidden md:block">
                                 ..................... </p>
-                            <p class="text-yellow-500 items-end">$12.4</p>
+                            <p class="text-yellow-500 items-end">$12</p>
                         </div>
                     </div>
                 </div>
                 <!-- end tab all -->
 
                 <!-- tab hot -->
-                <div x-show="tab === 'hot'" class="my-12 grid grid-cols-1 lg:grid-cols-2 gap-y-14">
+                <div x-show="tab === 'hot'" class="my-12 uppercase grid grid-cols-1 lg:grid-cols-2 gap-y-14">
                     <!-- kopi 1 -->
                     <div class="flex justify-center">
                         <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
@@ -290,32 +353,32 @@
                     <!-- kopi 2 -->
                     <div class="flex justify-center">
                         <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
-                            src="images/cofe-3-min.png" alt="">
-                        <div
-                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
-                            <a class="text-gray-800">Cappuccino</a>
-                            <p class="hidden md:block">
-                                ..................................... </p>
-                            <p class="text-yellow-500 items-end">$39.2</p>
-                        </div>
-                    </div>
-                    <!-- kopi 3 -->
-                    <div class="flex justify-center">
-                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
                             src="images/cofe-4-min.png" alt="">
                         <div
                             class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
                             <a class="text-gray-800">Caffè Mocha</a>
                             <p class="hidden md:block">
-                                ......................................... </p>
+                                ..................................... </p>
                             <p class="text-yellow-500 items-end">$16</p>
+                        </div>
+                    </div>
+                    <!-- kopi 3 -->
+                    <div class="flex justify-center">
+                        <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
+                            src="images/cofe-8-min.png" alt="">
+                        <div
+                            class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
+                            <a class="text-gray-800">Caffè Americano</a>
+                            <p class="hidden md:block">
+                                ............................... </p>
+                            <p class="text-yellow-500 items-end">$29</p>
                         </div>
                     </div>
                 </div>
                 <!-- end tab hot -->
 
                 <!-- tab new -->
-                <div x-show="tab === 'new'" class="my-12 grid grid-cols-1 lg:grid-cols-2 gap-y-14">
+                <div x-show="tab === 'new'" class="my-12 uppercase grid grid-cols-1 lg:grid-cols-2 gap-y-14">
                     <!-- kopi 4 -->
                     <div class="flex justify-center">
                         <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
@@ -331,13 +394,13 @@
                     <!-- kopi 5 -->
                     <div class="flex justify-center">
                         <img class="w-28 h-28 object-cover transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-125"
-                            src="images/cofe-8-min.png" alt="">
+                            src="images/cofe-3-min.png" alt="">
                         <div
                             class="flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start mx-5 gap-x-2">
-                            <a class="text-gray-800">Caffè Americano</a>
+                            <a class="text-gray-800">Cappuccino</a>
                             <p class="hidden md:block">
-                                ............................. </p>
-                            <p class="text-yellow-500 items-end">$29</p>
+                                ..................................... </p>
+                            <p class="text-yellow-500 items-end">$39.2</p>
                         </div>
                     </div>
                     <!-- kopi 6 -->
